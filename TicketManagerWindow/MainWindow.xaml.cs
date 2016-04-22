@@ -35,12 +35,12 @@ namespace TicketManagerWindow
             return files == null || files.Length == 0 ? null : files[0];
         }
 
-        private static TicketCollection ReadTickets(string file)
+        private static TicketList ReadTickets(string file)
         {
             using (var reader = new StreamReader(file))
             {
-                var xmlSer = new XmlSerializer(typeof(TicketCollection));
-                return xmlSer.Deserialize(reader) as TicketCollection;
+                var xmlSer = new XmlSerializer(typeof(TicketList));
+                return xmlSer.Deserialize(reader) as TicketList;
             }
         }
         #endregion

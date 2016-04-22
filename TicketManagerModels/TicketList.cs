@@ -5,7 +5,7 @@ using CB.Model.Common;
 namespace TicketManagerModels
 {
     [XmlRoot("tickets")]
-    public class TicketCollection: ObservableObject
+    public class TicketList: ObservableObject
     {
         #region Fields
         private Ticket[] _tickets;

@@ -11,7 +11,7 @@ namespace TicketManagerModels
         private string _assignedTo;
 
         private string _createdBy;
-        private DateTime _createdOn;
+        private DateTime _createdAt;
 
         private string _importance;
 
@@ -33,7 +33,7 @@ namespace TicketManagerModels
 
         private string _title;
 
-        private DateTime _updatedOn;
+        private DateTime _updatedAt;
 
         private string _url;
         #endregion
@@ -48,10 +48,10 @@ namespace TicketManagerModels
         }
 
         [XmlElement("updated-at")]
-        public DateTime UpdatedOn
+        public DateTime UpdatedAt
         {
-            get { return _updatedOn; }
-            set { SetProperty(ref _updatedOn, value); }
+            get { return _updatedAt; }
+            set { SetProperty(ref _updatedAt, value); }
         }
 
         [XmlElement("creator-name")]
@@ -69,10 +69,10 @@ namespace TicketManagerModels
         }
 
         [XmlElement("created-at")]
-        public DateTime CreatedOn
+        public DateTime CreatedAt
         {
-            get { return _createdOn; }
-            set { SetProperty(ref _createdOn, value); }
+            get { return _createdAt; }
+            set { SetProperty(ref _createdAt, value); }
         }
 
         [XmlElement("importance-name")]
