@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Xml.Serialization;
 using CB.Model.Common;
+using Newtonsoft.Json;
 
 
 namespace TicketManagerModels
 {
     public class Project: ObservableObject
     {
+        private const string CREATEDAT_PROP = "create-at";
+        private const string ID_PROP = "id";
+        private const string DESCRIPTION_PROP = "description";
+        private const string NAME_PROP = "name";
+        private const string UPDATEDAT_PROP = "updated-at";
         #region Fields
         private DateTime _createdAt;
         private string _description;
@@ -17,35 +23,35 @@ namespace TicketManagerModels
 
 
         #region  Properties & Indexers
-        [XmlElement("create-at")]
+        [XmlElement(CREATEDAT_PROP), JsonProperty(CREATEDAT_PROP)]
         public DateTime CreatedAt
         {
             get { return _createdAt; }
             set { SetProperty(ref _createdAt, value); }
         }
 
-        [XmlElement("id")]
+        [XmlElement(ID_PROP), JsonProperty(ID_PROP)]
         public int Id
         {
             get { return _id; }
             set { SetProperty(ref _id, value); }
         }
 
-        [XmlElement("description")]
+        [XmlElement(DESCRIPTION_PROP), JsonProperty(DESCRIPTION_PROP)]
         public string Description
         {
             get { return _description; }
             set { SetProperty(ref _description, value); }
         }
 
-        [XmlElement("name")]
+        [XmlElement(NAME_PROP), JsonProperty(NAME_PROP)]
         public string Name
         {
             get { return _name; }
             set { SetProperty(ref _name, value); }
         }
 
-        [XmlElement("updated-at")]
+        [XmlElement(UPDATEDAT_PROP), JsonProperty(UPDATEDAT_PROP)]
         public DateTime UpdatedAt
         {
             get { return _updatedAt; }
@@ -54,3 +60,6 @@ namespace TicketManagerModels
         #endregion
     }
 }
+
+
+// TODO: https://qasolutions.lighthouseapp.com/
